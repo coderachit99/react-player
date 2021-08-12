@@ -1,0 +1,33 @@
+nav {
+  min-height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  h1 {
+    font-family: "Merienda", cursive;
+  }
+  button {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 1rem 1.5rem;
+    transition: all 0.3s ease;
+    border-radius: 19px;
+    background: linear-gradient(120deg, #f0a1a13d, #f5adc9b2);
+    box-shadow: -2px 5px 0px #e4b1c2, 5px -5px 0px #ffffff;
+    &:hover {
+      border-radius: 19px;
+      background: linear-gradient(-120deg, #f0a1a13d, #f5adc9b2);
+      box-shadow: 5px -5px 0px #d6abb9, -5px 5px 0px #ffffff;
+      transition: all 0.1s ease;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    button {
+      z-index: 10;
+    }
+  }
+}

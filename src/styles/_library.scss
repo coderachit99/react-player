@@ -1,0 +1,77 @@
+*::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+*::-webkit-scrollbar-track {
+  background: #c88eda52 transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #da8def;
+  border-radius: 2px;
+}
+
+.library {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20rem;
+  height: 100%;
+  background: linear-gradient(120deg, #fdd70041, #bf00ff42);
+  box-shadow: 0.5px 2px 29px rgba(231, 128, 128, 0.404);
+  overflow: scroll;
+  transition: all 0.6s ease-in-out;
+  transform: translateX(-100%);
+  opacity: 0;
+  h2 {
+    padding: 2rem 0rem;
+    text-align: center;
+    font-family: "Rye", cursive;
+    color: rgb(68, 64, 68);
+    &:hover {
+      color: rgb(255, 1, 86);
+      cursor: pointer;
+    }
+  }
+}
+.library-song {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem 1rem 2rem;
+  cursor: pointer;
+  img {
+    width: 30%;
+    border-radius: 0.3px 25px;
+  }
+  &:hover {
+    border-radius: 3rem 0.1rem;
+    color: rgb(0, 0, 0);
+    background: linear-gradient(225deg, #ab28e779, #ff26267e);
+    box-shadow: -9px 9px 18px #5f5b5b, 9px -9px 18px #a3adad54;
+  }
+}
+.song-description {
+  padding-left: 1rem;
+  h3 {
+    font-size: 1rem;
+    font-family: "Merienda", cursive;
+  }
+  h4 {
+    font-size: 0.7rem;
+    font-family: "Merienda", cursive;
+  }
+}
+
+.selected {
+  background: linear-gradient(175deg, #ff04043d, #f5adc9b2);
+  border-radius: 3rem 0.4rem;
+}
+.active-library {
+  transform: translateX(0%);
+  opacity: 1;
+}
+@media screen and (max-width: 768px) {
+  .library {
+    width: 100%;
+  }
+}
